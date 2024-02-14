@@ -22,11 +22,16 @@ function getARandomAlphabet() {
   let randomNumber = Math.random() * 25;
   let index = Math.round(randomNumber);
   let alphabet = alphabets[index];
-//   let alphabetUpper = alphabet.toUpperCase();
-  return alphabet;
+  let alphabetUpper = alphabet.toUpperCase();
+  return alphabetUpper;
 }
 
 function setBackgroundById(elementId) {
     let element = document.getElementById(elementId)
     element.classList.add('bg-orange-400')
+}
+
+function removeBackgroundById(elementId) {
+  let element = document.getElementById(elementId)
+  element.classList.remove('bg-orange-400')
 }

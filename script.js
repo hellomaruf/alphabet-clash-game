@@ -12,7 +12,22 @@ function play() {
 
 function continueGame() {
   let alphabet = getARandomAlphabet();
+  let alphabets = alphabet.toLowerCase();
   let currentAlphabet = document.getElementById("current-alphabet");
-  currentAlphabet.innerText = alphabet;
-  setBackgroundById(alphabet);
+  currentAlphabet.innerText = alphabets;
+  setBackgroundById(alphabets);
 }
+
+function handleKeyboardButtonPress(event) {
+  let playerPressed = event.key;
+  let currentAlphabetDiv = document.getElementById("current-alphabet");
+  let currentAlphabet = currentAlphabetDiv.innerText;
+  if (playerPressed === currentAlphabet) {
+    console.log("You get a point");
+    removeBackgroundById(currentAlphabet);
+    continueGame();
+  } else {
+    console.log("you lost your 1 life");
+  }
+}
+document.addEventListener("keyup", handleKeyboardButtonPress);
