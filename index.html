@@ -11,9 +11,35 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- css link -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <h1 class="">hello</h1>
+  <body class="font-poppins">
+    <!-- main section -->
+    <main
+      class="h-screen bg-no-repeat bg-center bg-[#010313] bg-[url(images/background.png)]"
+    >
+      <!-- Home Section -->
+      <section
+        class="home text-center flex flex-col justify-center hidden h-screen text-white"
+      >
+        <div class="space-y-5">
+          <h1 class="text-white font-anton text-8xl">Alpha Clash Pro</h1>
+          <p>Unleash Your Keyboard Kung Fu : Press “Enter” to Play</p>
+          <button class="btn bg-white text-black">Play Now</button>
+        </div>
+      </section>
+      <section class="play"></section>
+      <section class="result"></section>
+    </main>
+
     <script src="script.js"></script>
   </body>
 </html>
