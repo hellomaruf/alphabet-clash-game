@@ -35,3 +35,11 @@ function removeBackgroundById(elementId) {
   let element = document.getElementById(elementId)
   element.classList.remove('bg-orange-400')
 }
+
+// set score and life by elementid****************
+function setTextElementValueById(elementId) {
+  let elementDiv = document.getElementById(elementId)
+  let elementValueText = elementDiv.innerText
+  let elementValue = parseInt(elementValueText)
+  return elementValue
+}

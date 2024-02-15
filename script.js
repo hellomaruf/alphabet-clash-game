@@ -24,10 +24,34 @@ function handleKeyboardButtonPress(event) {
   let currentAlphabet = currentAlphabetDiv.innerText;
   if (playerPressed === currentAlphabet) {
     console.log("You get a point");
+    // functional way to solve***************************
+    let score = document.getElementById("Current-score");
+    let scoreValue = setTextElementValueById("Current-score");
+    let newScoreValue = scoreValue + 1;
+    score.innerText = newScoreValue;
+    
+    // Bangla way to solve********************************
+    // let score = document.getElementById("score");
+    // let scoreText = score.innerText;
+    // let scoreInt = parseInt(scoreText);
+    // let newScore = scoreInt + 1;
+    // console.log(newScore);
+    // score.innerText = newScore;
     removeBackgroundById(currentAlphabet);
     continueGame();
   } else {
-    console.log("you lost your 1 life");
+    // Functional way to solve****************************
+    let life = document.getElementById("current-life");
+    let lifeValue = setTextElementValueById("current-life");
+    let newLifeValue = lifeValue - 1;
+    life.innerText = newLifeValue;
+
+    // Bangla way to solve***************************
+    // let currentlife = document.getElementById("current-life");
+    // let currentLifeText = currentlife.innerText;
+    // let currentLifeInt = parseInt(currentLifeText);
+    // let newLife = currentLifeInt - 1;
+    // currentlife.innerText = newLife;
   }
 }
 document.addEventListener("keyup", handleKeyboardButtonPress);
