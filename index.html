@@ -111,7 +111,8 @@
               <button
                 class="btn rounded-full bg-[#894189] text-white border-none hover:bg-[#532553]"
               >
-                Life<i class="ri-heart-add-fill text-xl"></i><span id="current-life">5</span>
+                Life<i class="ri-heart-add-fill text-xl"></i
+                ><span id="current-life">5</span>
               </button>
               <button
                 class="btn rounded-full bg-[#360490] text-white border-none hover:bg-[#2e1c4ec9]"
@@ -125,15 +126,18 @@
       </section>
       <!-- play ground page End -->
       <!-- Display Score start -->
-      <section class="justify-center items-center h-full hidden">
-        <div
-          class="text-center space-y-5 bg-white bg-opacity-20 p-8 rounded-xl"
-        >
-          <h1 class="text-6xl text-white font-bold">
-            Score : <span id="" class="font-medium">14</span>
-          </h1>
-          <button class="btn">Play Again</button>
-          <p class="text-white">Practice will make you Pro</p>
+      <section id="showScore" class="justify-center items-center h-full hidden">
+        <div class="flex items-center justify-center h-screen">
+          <div
+            class="bg-white p-10 space-y-5 rounded-xl max-w-96 mx-auto bg-opacity-20 flex flex-col justify-center items-center"
+          >
+            <p class="text-white font-semibold text-2xl">Game Over !</p>
+            <h1 class="text-6xl text-white font-bold">
+              Score : <span id="" class="font-medium">14</span>
+            </h1>
+            <button onclick="play()" class="btn">Play Again</button>
+            <p class="text-white">Practice will make you Pro</p>
+          </div>
         </div>
       </section>
       <!-- Display Score End -->

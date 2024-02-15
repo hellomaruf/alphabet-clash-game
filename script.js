@@ -6,10 +6,14 @@
 // }
 function play() {
   removeElementById("home-section");
+  removeElementById("showScore");
   showElementById("play-ground-section");
+  // Set score and life****************************
+  setElementValueById("current-life", 5);
+  setElementValueById("Current-score", 0);
   continueGame();
 }
-
+ 
 function continueGame() {
   let alphabet = getARandomAlphabet();
   let alphabets = alphabet.toLowerCase();
@@ -29,7 +33,7 @@ function handleKeyboardButtonPress(event) {
     let scoreValue = setTextElementValueById("Current-score");
     let newScoreValue = scoreValue + 1;
     score.innerText = newScoreValue;
-    
+
     // Bangla way to solve********************************
     // let score = document.getElementById("score");
     // let scoreText = score.innerText;
@@ -45,6 +49,11 @@ function handleKeyboardButtonPress(event) {
     let lifeValue = setTextElementValueById("current-life");
     let newLifeValue = lifeValue - 1;
     life.innerText = newLifeValue;
+
+    if (newLifeValue === 0) {
+      removeElementById("play-ground-section");
+      showElementById("showScore");
+    }
 
     // Bangla way to solve***************************
     // let currentlife = document.getElementById("current-life");
